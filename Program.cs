@@ -18,17 +18,36 @@ namespace Calculadora
             num1 = Convert.ToInt32(Console.ReadLine());
 
             // Pedir al usuario que escriba el segundo numero.
-            Console.WriteLine("De favor escribir otro numero y presione Enter");
+            Console.WriteLine("Por favor escribir otro numero y presione Enter");
             num2 = Convert.ToInt32(Console.ReadLine());
 
             // Pedir al usuario que elija una opción.
             Console.WriteLine("Elija una opción de la siguiente lista:");
-            Console.WriteLine("\ts - Sumar");
-            Console.WriteLine("\tr - Restar");
+            Console.WriteLine("\ta - Agregar");
+            Console.WriteLine("\ts - Sustraer");
             Console.WriteLine("\tm - Multipicar");
             Console.WriteLine("\td - Dividir");
             Console.Write("Tu opcion? "); 
 
+            // Use una declaración de cambio para hacer los cálculos.
+            switch (Console.ReadLine())
+            {
+                case "a":
+                    Console.WriteLine($"Tu resultado: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "s":
+                    Console.WriteLine($"Tu resultado: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"Tu resultado: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "d":
+                    Console.WriteLine($"Tu resultado: {num1} / {num2} = " + (num1 / num2));
+                    break;
+            }
+            // Espere a que el usuario responda antes de cerrar.
+            Console.Write("Presione cualquier tecla para cerrar la aplicación de la consola Calculadora...");
+            Console.ReadKey();
            
             
         }
