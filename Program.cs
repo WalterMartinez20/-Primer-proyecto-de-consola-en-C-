@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculadora
+namespace Primer_proyecto_de_Consola_C_Sharp
 {
     class Program
     {
@@ -48,8 +48,6 @@ namespace Calculadora
             // Espere a que el usuario responda antes de cerrar.
             Console.Write("Presione cualquier tecla para cerrar la aplicación de la consola Calculadora...");
             Console.ReadKey();
-           
-            
         }
     }
 }
